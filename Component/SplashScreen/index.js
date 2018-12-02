@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {StyleSheet, Animated, View} from 'react-native';
 import { Container, Text, Spinner, Button} from 'native-base';
+import { Actions } from 'react-native-router-flux'; 
+// import { setRootViewBackgroundColor } from 'react-native-root-view-background'; 
 
 
 export default class SplashScreen extends Component {
@@ -23,6 +25,7 @@ export default class SplashScreen extends Component {
        this.setState({
          loader : true
        }) 
+       Actions.login()                                                                                                                                                                                           
       },4000)
     }
   render() {
@@ -38,6 +41,7 @@ export default class SplashScreen extends Component {
           :
           <View></View>
         }
+
       </Container>
     );
   }
